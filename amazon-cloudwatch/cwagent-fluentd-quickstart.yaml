@@ -54,7 +54,7 @@ data:
   cwagentconfig.json: |
     {
       "agent": {
-        "region": "<AWS_REGION>"
+        "region": "us-west-2"
       },
       "logs": {
         "metrics_collected": {
@@ -162,11 +162,11 @@ spec:
 ---
 
 # create configmap for cluster name and aws region for CloudWatch Logs
-# need to replace the placeholders gitopsworkshop and <AWS_REGION>
+# need to replace the placeholders gitopsworkshop and us-west-2
 apiVersion: v1
 data:
   cluster.name: gitopsworkshop
-  logs.region: <AWS_REGION>
+  logs.region: us-west-2
 kind: ConfigMap
 metadata:
   name: cluster-info
